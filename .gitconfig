@@ -1,0 +1,24 @@
+# Shared Git Configuration
+# Personal settings (user.name, user.email, etc.) should go in ~/.gitconfig.local
+
+[color]
+    ui = auto
+
+[init]
+    defaultBranch = main
+
+[alias]
+    co = "!f() { git checkout \"$@\"; }; f"
+    sw = switch
+    st = status
+    ci = commit
+    cm = "commit -m"
+    lg = log --oneline --graph --all
+    rh = "!f() { git reset --hard \"$1\"; }; f"
+    sb = submodule
+    br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+
+# Include local gitconfig for personal settings
+[include]
+    path = ~/.gitconfig.local
+

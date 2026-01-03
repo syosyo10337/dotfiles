@@ -1,0 +1,6 @@
+# Ignore local configuration files
+.gitconfig.local
+
+# Ignore backup directory
+.dotbackup/
+
