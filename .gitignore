@@ -53,5 +53,9 @@
 .vscode/
 .idea/
 *.sublime-workspace
-.cursor/plans
-.cursor/ide_state.json
+
+# Cursor IDE
+# 拡張機能の実体、個人設定、履歴は除外
+# 拡張機能リストのみ管理（スクリプトは.bin/に配置）
+.cursor/*
+!.cursor/extensions.txt
