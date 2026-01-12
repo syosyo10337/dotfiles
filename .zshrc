@@ -24,5 +24,10 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias dc='docker compose'
 export PATH="$HOME/.local/bin:$PATH"
+[[ /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh)
+
+
+# aliases
+alias dc='docker compose'
+alias k='kubectl'
