@@ -30,7 +30,7 @@ format = "[$path]($style) "
 style = "cyan bold"
 
 [git_branch]
-format = "[$symbol$branch]($style) "
+format = "[$symbol $branch]($style) "
 symbol = ""
 style = "purple bold"
 

@@ -1,6 +1,10 @@
 local wezterm = require("wezterm")
--- 設定オブジェクトを初期化
 local config = wezterm.config_builder()
+
+-- キーバインド設定を読み込む
+local keybinds = require("keybinds")
+config.leader = keybinds.leader
+config.keys = keybinds.keys
 
 -- === 基本設定 ===
 config.font = wezterm.font("Moralerspace Argon")
@@ -16,7 +20,7 @@ config.macos_window_background_blur = 15
 config.window_decorations = "RESIZE"
 
 -- tab setting
-config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = false
 config.show_new_tab_button_in_tab_bar = false
 config.use_fancy_tab_bar = false
 
@@ -49,6 +53,19 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 		{ Foreground = { Color = background } },
 		{ Text = SOLID_RIGHT_ARROW },
 	}
+end)
+
+-- LEADERキーの状態をステータスバーに表示
+wezterm.on("update-status", function(window, pane)
+	local leader = ""
+	if window:leader_is_active() then
+		leader = " LEADER "
+	end
+	window:set_right_status(wezterm.format({
+		{ Foreground = { Color = "#fabd2f" } },
+		{ Background = { Color = "#3c3836" } },
+		{ Text = leader },
+	}))
 end)
 
 -- 設定変更時に自動リロード
