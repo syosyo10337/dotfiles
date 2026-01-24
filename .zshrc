@@ -1,13 +1,4 @@
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
-export RBENV_ROOT="$HOME/.rbenv"
 export PATH="/usr/local/opt/mysql/bin:$PATH"
-
-PS1='%F{green}[%n@%m %T]%F{reset_color} %.
-%# '
-export PATH="$PATH:$HOME/development/flutter/bin"
-export PATH="$PATH:$HOME/Dev/flutter/bin"
 
 # fnm
 FNM_PATH="/Users/masanao/Library/Application Support/fnm"
@@ -31,3 +22,15 @@ export PATH="$HOME/.local/bin:$PATH"
 # aliases
 alias dc='docker compose'
 alias k='kubectl'
+
+
+# starship
+eval "$(starship init zsh)"
+
+# vim related
+alias ls="eza --icons"
+alias ll="eza -l --icons"
+alias cat="bat"
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

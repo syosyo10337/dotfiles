@@ -1,0 +1,65 @@
+format = """
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$kubernetes\
+$line_break\
+$character\
+"""
+right_format ="""
+$username\
+$time\
+"""
+
+[username]
+show_always = true
+format = "[$user]($style) "
+style_user = "blue bold"
+
+# ホスト名（リモート接続時のみ表示）
+[hostname]
+ssh_only = true
+format = "[@$hostname]($style) "
+style = "green bold"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path]($style) "
+style = "cyan bold"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = ""
+style = "purple bold"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "red bold"
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%T"
+style = "yellow bold"
+
+[kubernetes]
+disabled = false
+format = '[$symbol $context($namespace)]($style) '
+symbol = ""
+style = "bright-blue bold"
+
+# production環境は色を変える（安全対策）
+[[kubernetes.contexts]]
+context_pattern = "^production$"
+context_alias = "prod"
+style = "red bold"
+
+[[kubernetes.contexts]]
+context_pattern = "^staging$"
+style = "yellow bold"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
