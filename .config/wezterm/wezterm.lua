@@ -7,6 +7,7 @@ config.leader = keybinds.leader
 config.keys = keybinds.keys
 
 -- === 基本設定 ===
+config.max_fps = 120
 config.font = wezterm.font("Moralerspace Argon")
 config.font_size = 16.0
 config.use_ime = true
@@ -23,18 +24,34 @@ config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = false
 config.show_new_tab_button_in_tab_bar = false
 config.use_fancy_tab_bar = false
+config.tab_max_width = 24 -- タブの最大幅を広げる
 
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick
 
+-- Gruvbox カラーパレット
+local gruvbox = {
+	bg0 = "#282828",
+	bg1 = "#3c3836",
+	bg2 = "#504945",
+	fg0 = "#fbf1c7",
+	fg1 = "#ebdbb2",
+	fg4 = "#a89984",
+	orange = "#fe8019",
+	yellow = "#fabd2f",
+}
+
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local tab_bar_bg = "#1e1e1e"
-	local background = "#d5c4a1" -- bg2 (非アクティブタブ)
-	local foreground = "#665c54" -- fg3 (非アクティブ文字)
+	local tab_bar_bg = gruvbox.bg0
+	local background = gruvbox.bg2 -- 非アクティブタブ（暗め）
+	local foreground = gruvbox.fg4 -- 非アクティブ文字（控えめ）
 
 	if tab.is_active then
-		background = "#79740e" -- yellow (アクティブタブ)
-		foreground = "#fbf1c7" -- bg (明るい文字)
+		background = gruvbox.orange -- アクティブタブ（目立つオレンジ）
+		foreground = gruvbox.bg0 -- アクティブ文字（暗い背景色で高コントラスト）
+	elseif hover then
+		background = gruvbox.bg1 -- ホバー時は少し明るく
+		foreground = gruvbox.fg1
 	end
 
 	local title = " " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. " "
@@ -67,6 +84,11 @@ wezterm.on("update-status", function(window, pane)
 		{ Text = leader },
 	}))
 end)
+
+-- ペイン境界線の色
+config.colors = {
+	split = gruvbox.orange, -- アクティブペインとの境界をオレンジで強調
+}
 
 -- 設定変更時に自動リロード
 config.automatically_reload_config = true
