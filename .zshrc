@@ -20,6 +20,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 # aliases
+alias d='docker'
 alias dc='docker compose'
 alias k='kubectl'
 
