@@ -90,6 +90,12 @@ config.colors = {
 	split = gruvbox.orange, -- アクティブペインとの境界をオレンジで強調
 }
 
+-- 非アクティブペインを暗くする
+config.inactive_pane_hsb = {
+	saturation = 0.8,
+	brightness = 0.7,
+}
+
 -- 設定変更時に自動リロード
 config.automatically_reload_config = true
 
