@@ -22,7 +22,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # aliases
 alias d='docker'
 alias dc='docker compose'
+alias g='git'
 alias k='kubectl'
+alias lzd='lazydocker'
 
 
 # starship
