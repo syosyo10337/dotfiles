@@ -3,7 +3,6 @@ $hostname\
 $directory\
 $git_branch\
 $git_commit\
-$git_status\
 $kubernetes\
 $line_break\
 $character\
@@ -38,24 +37,9 @@ style = "purple bold"
 # デタッチドHEAD時にコミットハッシュを表示
 [git_commit]
 only_detached = true
-format = "[🔖 $hash$tag]($style) "
+format = "[$hash$tag]($style) "
 style = "yellow bold"
 tag_disabled = false
-tag_symbol = " 🏷️ "
-
-[git_status]
-format = '([$all_status$ahead_behind]($style) )'
-conflicted = "⚔️ "
-ahead = "⬆️ "
-behind = "⬇️ "
-diverged = "↕️ "
-untracked = "❓"
-stashed = "📦"
-modified = "✏️ "
-staged = "✅"
-renamed = "📝"
-deleted = "🗑️ "
-style = "bold"
 
 [time]
 disabled = false
