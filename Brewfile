@@ -1,7 +1,4 @@
 tap "daipeihust/tap"
-tap "osx-cross/arm"
-tap "osx-cross/avr"
-tap "qmk/qmk"
 brew "base64"
 brew "bat"
 brew "eza"
