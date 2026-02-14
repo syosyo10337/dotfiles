@@ -23,11 +23,7 @@ config.window_decorations = "RESIZE"
 -- tab setting
 config.hide_tab_bar_if_only_one_tab = false
 config.show_new_tab_button_in_tab_bar = false
-config.use_fancy_tab_bar = false
-config.tab_max_width = 24 -- タブの最大幅を広げる
-
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick
+config.use_fancy_tab_bar = true
 
 -- Gruvbox カラーパレット
 local gruvbox = {
@@ -41,36 +37,10 @@ local gruvbox = {
 	yellow = "#fabd2f",
 }
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local tab_bar_bg = gruvbox.bg0
-	local background = gruvbox.bg2 -- 非アクティブタブ（暗め）
-	local foreground = gruvbox.fg4 -- 非アクティブ文字（控えめ）
-
-	if tab.is_active then
-		background = gruvbox.orange -- アクティブタブ（目立つオレンジ）
-		foreground = gruvbox.bg0 -- アクティブ文字（暗い背景色で高コントラスト）
-	elseif hover then
-		background = gruvbox.bg1 -- ホバー時は少し明るく
-		foreground = gruvbox.fg1
-	end
-
-	local title = " " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. " "
-
-	return {
-		-- 左の丸み
-		{ Background = { Color = tab_bar_bg } },
-		{ Foreground = { Color = background } },
-		{ Text = SOLID_LEFT_ARROW },
-		-- タブ本体
-		{ Background = { Color = background } },
-		{ Foreground = { Color = foreground } },
-		{ Text = title },
-		-- 右の丸み
-		{ Background = { Color = tab_bar_bg } },
-		{ Foreground = { Color = background } },
-		{ Text = SOLID_RIGHT_ARROW },
-	}
-end)
+config.window_frame = {
+	font = wezterm.font("Moralerspace Argon"),
+	font_size = 14.0,
+}
 
 -- LEADERキーの状態をステータスバーに表示
 wezterm.on("update-status", function(window, pane)
@@ -88,6 +58,25 @@ end)
 -- ペイン境界線の色
 config.colors = {
 	split = gruvbox.orange, -- アクティブペインとの境界をオレンジで強調
+	tab_bar = {
+		background = gruvbox.bg0,
+		active_tab = {
+			bg_color = gruvbox.orange,
+			fg_color = gruvbox.bg0,
+		},
+		inactive_tab = {
+			bg_color = gruvbox.bg2,
+			fg_color = gruvbox.fg4,
+		},
+		inactive_tab_hover = {
+			bg_color = gruvbox.bg1,
+			fg_color = gruvbox.fg1,
+		},
+		new_tab = {
+			bg_color = gruvbox.bg0,
+			fg_color = gruvbox.fg4,
+		},
+	},
 }
 
 -- 非アクティブペインを暗くする
