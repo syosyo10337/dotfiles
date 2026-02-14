@@ -1,67 +1,65 @@
 format = """
+
 $hostname\
 $directory\
 $git_branch\
 $git_commit\
 $kubernetes\
-$line_break\
-$character\
-"""
-right_format ="""
+$fill\
 $username\
 $time\
+$line_break\
+$character\
 """
 
 [username]
 show_always = true
-format = "[$user]($style) "
-style_user = "blue bold"
+format = "[ $user ](bold fg:#83a598 bg:#504945)"
 
 # ホスト名（リモート接続時のみ表示）
 [hostname]
 ssh_only = true
-format = "[@$hostname]($style) "
-style = "green bold"
+format = "[ @$hostname ](bold fg:#b8bb26 bg:#504945)"
 
 [directory]
 truncation_length = 3
 truncate_to_repo = true
-format = "[$path]($style) "
-style = "cyan bold"
+format = "[ $path ](bold fg:#83a598 bg:#504945)"
 
 [git_branch]
-format = "[$symbol $branch]($style) "
-symbol = ""
-style = "purple bold"
+format = "[ $symbol $branch ](bold fg:#d3869b bg:#504945)"
+symbol = ""
 
 # デタッチドHEAD時にコミットハッシュを表示
 [git_commit]
 only_detached = true
-format = "[$hash$tag]($style) "
-style = "yellow bold"
+format = "[ $hash$tag ](fg:#fabd2f bg:#504945)"
 tag_disabled = false
 
 [time]
 disabled = false
-format = "[$time]($style) "
+format = "[ $time ](fg:#fabd2f bg:#504945)"
 time_format = "%T"
-style = "yellow bold"
 
 [kubernetes]
 disabled = false
-format = '[$symbol $context($namespace)]($style) '
-symbol = ""
-style = "bright-blue bold"
+format = '[ $symbol $context($namespace) ]($style)'
+symbol = ""
+style = "bold fg:#7daea3 bg:#504945"
 
 # production環境は色を変える（安全対策）
 [[kubernetes.contexts]]
 context_pattern = "^production$"
 context_alias = "prod"
-style = "red bold"
+style = "bold fg:red bg:#504945"
 
 [[kubernetes.contexts]]
 context_pattern = "^staging$"
-style = "yellow bold"
+style = "bold fg:yellow bg:#504945"
+
+[fill]
+symbol = " "
+style = "bg:#504945"
 
 [character]
 success_symbol = "[❯](bold green)"
