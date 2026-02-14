@@ -42,6 +42,12 @@ config.window_frame = {
 	font_size = 14.0,
 }
 
+-- タブのタイトルから番号を除去し、プロセス名だけ表示
+wezterm.on("format-tab-title", function(tab)
+	local title = tab.active_pane.title
+	return " " .. title .. " "
+end)
+
 -- LEADERキーの状態をステータスバーに表示
 wezterm.on("update-status", function(window, pane)
 	local leader = ""
