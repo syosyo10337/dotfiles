@@ -11,6 +11,13 @@ return {
         jsonc = { "biome" },
         css = { "biome" },
       },
+      formatters = {
+        ["markdownlint-cli2"] = {
+          condition = function()
+            return true
+          end,
+        },
+      },
     },
   },
 }
