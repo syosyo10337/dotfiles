@@ -91,6 +91,20 @@ config.inactive_pane_hsb = {
 	brightness = 0.7,
 }
 
+-- 中クリックペーストを無効化
+config.mouse_bindings = {
+	{
+		event = { Up = { streak = 1, button = "Middle" } },
+		mods = "NONE",
+		action = wezterm.action.Nop,
+	},
+	{
+		event = { Down = { streak = 1, button = "Middle" } },
+		mods = "NONE",
+		action = wezterm.action.Nop,
+	},
+}
+
 -- 設定変更時に自動リロード
 config.automatically_reload_config = true
 
