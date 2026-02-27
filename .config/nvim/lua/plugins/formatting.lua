@@ -1,4 +1,15 @@
 return {
+  -- Biome LSP (linter + formatter diagnostics)
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        biome = {},
+      },
+    },
+  },
+
+  -- Biome as formatter via conform.nvim
   {
     "stevearc/conform.nvim",
     opts = {
