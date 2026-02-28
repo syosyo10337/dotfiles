@@ -8,8 +8,9 @@ return {
   },
   opts = {
     hooks = {
-      diff_buf_read = function()
+      diff_buf_win_enter = function()
         vim.opt_local.foldenable = false
+        vim.opt_local.foldlevel = 99
       end,
     },
     view = {
