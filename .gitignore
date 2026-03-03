@@ -51,11 +51,6 @@
 # エディタ
 # ========================================
 .vscode/
+.cursor/
 .idea/
 *.sublime-workspace
-
-# Cursor IDE
-# 拡張機能の実体、個人設定、履歴は除外
-# 拡張機能リストのみ管理（スクリプトは.bin/に配置）
-.cursor/*
-!.cursor/extensions.txt
