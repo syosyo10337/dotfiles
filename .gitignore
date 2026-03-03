@@ -51,6 +51,5 @@
 # エディタ
 # ========================================
 .vscode/
-.cursor/
 .idea/
 *.sublime-workspace

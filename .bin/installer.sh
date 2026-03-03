@@ -21,10 +21,11 @@ link_to_homedir() {
   fi
 
   for f in $dotdir/.??*; do
-    # Skip .git and .bin directories
+    # Skip directories that should not be symlinked
     [[ `basename $f` == ".git" ]] && continue
     [[ `basename $f` == ".bin" ]] && continue
     [[ `basename $f` == ".gitignore" ]] && continue
+    [[ `basename $f` == ".vscode" ]] && continue
     
     if [[ -L "$HOME/`basename $f`" ]];then
       command rm -f "$HOME/`basename $f`"
