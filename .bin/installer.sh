@@ -1,79 +1,108 @@
 #!/usr/bin/env bash
-set -o pipefail
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+DOTDIR="$(dirname "${SCRIPT_DIR}")"
 
 helpmsg() {
-  command echo "Usage: $0 [--help | -h]" 0>&2
-  command echo ""
+  echo "Usage: installer.sh [OPTIONS]"
+  echo ""
+  echo "Options:"
+  echo "  -h, --help    Show this help message"
+  echo "  -d, --debug   Enable debug mode"
+}
+
+check_homebrew() {
+  if command -v brew &> /dev/null; then
+    echo "✓ Homebrew is already installed"
+    return 0
+  fi
+
+  echo "Error: Homebrew is not installed."
+  echo "Run the following command first:"
+  echo ""
+  echo "  /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+  echo ""
+  exit 1
 }
 
 link_to_homedir() {
-  command echo "backup old dotfiles..."
-  if [ ! -d "$HOME/.dotbackup" ];then
-    command echo "$HOME/.dotbackup not found. Creating it..."
-    command mkdir "$HOME/.dotbackup"
+  echo "Creating symlinks..."
+
+  if [[ "$HOME" == "$DOTDIR" ]]; then
+    echo "Error: dotfiles directory is the same as HOME"
+    return 1
   fi
 
-  local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-  local dotdir=$(dirname ${script_dir})
-  if [[ "$HOME" == "$dotdir" ]];then
-    command echo "same install src dest"
-    return
+  if [ ! -d "$HOME/.dotbackup" ]; then
+    mkdir "$HOME/.dotbackup"
   fi
 
-  for f in $dotdir/.??*; do
-    # Skip directories that should not be symlinked
-    [[ `basename $f` == ".git" ]] && continue
-    [[ `basename $f` == ".bin" ]] && continue
-    [[ `basename $f` == ".gitignore" ]] && continue
-    [[ `basename $f` == ".vscode" ]] && continue
-    
-    if [[ -L "$HOME/`basename $f`" ]];then
-      command rm -f "$HOME/`basename $f`"
+  for f in "$DOTDIR"/.??*; do
+    local name
+    name=$(basename "$f")
+
+    [[ "$name" == ".git" ]] && continue
+    [[ "$name" == ".bin" ]] && continue
+    [[ "$name" == ".gitignore" ]] && continue
+    [[ "$name" == ".vscode" ]] && continue
+    [[ "$name" == ".claude" ]] && continue
+
+    if [[ -L "$HOME/$name" ]]; then
+      rm -f "$HOME/$name"
     fi
-    if [[ -e "$HOME/`basename $f`" ]];then
-      command mv "$HOME/`basename $f`" "$HOME/.dotbackup"
+    if [[ -e "$HOME/$name" ]]; then
+      rm -rf "$HOME/.dotbackup/$name"
+      mv "$HOME/$name" "$HOME/.dotbackup"
     fi
-    command ln -snf $f $HOME
+    ln -snf "$f" "$HOME"
+    echo "  Linked: $name -> $f"
   done
+
+  echo "✓ Symlinks created"
 }
 
 setup_gitconfig() {
-  command echo "Setting up gitconfig..."
-  
-  # Check if .gitconfig.local already exists
-  if [[ ! -e "$HOME/.gitconfig.local" ]]; then
-    command echo "Creating ~/.gitconfig.local for personal settings..."
-    command echo "Please enter your Git user information:"
-    
-    # Prompt for user name
-    read -p "Your name: " git_user_name
-    read -p "Your email: " git_user_email
-    
-    # Create .gitconfig.local
-    cat > "$HOME/.gitconfig.local" << EOF
+  if [[ -e "$HOME/.gitconfig.local" ]]; then
+    echo "✓ ~/.gitconfig.local already exists, skipping..."
+    return 0
+  fi
+
+  echo "Creating ~/.gitconfig.local for personal settings..."
+  read -p "Your name: " git_user_name
+  read -p "Your email: " git_user_email
+
+  cat > "$HOME/.gitconfig.local" << EOF
 [user]
     name = ${git_user_name}
     email = ${git_user_email}
-
-# Add other personal/machine-specific settings here
-# [core]
-#     excludesfile = ~/.gitignore_global
 EOF
-    
-    command echo "✓ Created ~/.gitconfig.local"
-  else
-    command echo "✓ ~/.gitconfig.local already exists, skipping..."
+
+  echo "✓ Created ~/.gitconfig.local"
+}
+
+install_packages() {
+  echo "Installing Homebrew packages..."
+  brew bundle --file="$DOTDIR/Brewfile"
+  echo "✓ Shared packages installed"
+
+  if [[ -f "$DOTDIR/Brewfile.personal" ]]; then
+    read -p "Install personal packages? (y/N): " answer
+    if [[ "$answer" =~ ^[Yy]$ ]]; then
+      brew bundle --file="$DOTDIR/Brewfile.personal"
+      echo "✓ Personal packages installed"
+    fi
   fi
 }
 
-while [ $# -gt 0 ];do
+while [ $# -gt 0 ]; do
   case ${1} in
     --debug|-d)
       set -uex
       ;;
     --help|-h)
       helpmsg
-      exit 1
+      exit 0
       ;;
     *)
       ;;
@@ -81,6 +110,8 @@ while [ $# -gt 0 ];do
   shift
 done
 
+check_homebrew
 link_to_homedir
 setup_gitconfig
-command echo -e "\e[1;36m Install completed!!!! \e[m"
+install_packages
+printf "\e[1;36m Install completed! \e[m\n"
