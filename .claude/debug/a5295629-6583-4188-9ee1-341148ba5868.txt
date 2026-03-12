@@ -1,0 +1,899 @@
+2026-03-04T13:53:48.244Z [DEBUG] Detected deletion of /Users/masanao/.claude/settings.json
+2026-03-04T13:53:48.248Z [DEBUG] Getting matching hook commands for ConfigChange with query: user_settings
+2026-03-04T13:53:48.248Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T13:53:48.248Z [DEBUG] Matched 0 unique hooks for query "user_settings" (0 before deduplication)
+2026-03-04T13:53:48.262Z [DEBUG] Settings changed from userSettings, updating app state
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all deny rules for destination 'userSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all ask rules for destination 'userSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all deny rules for destination 'projectSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all ask rules for destination 'projectSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all deny rules for destination 'localSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all ask rules for destination 'localSettings' with 0 rule(s): []
+2026-03-04T13:53:48.265Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 162 rule(s): ["Bash(pnpm format:*)","Bash(ls:*)","WebFetch(domain:www.figma.com)","Bash(cat:*)","mcp__chrome-devtools__new_page","mcp__figma-remote-mcp__get_design_context","mcp__figma-remote-mcp__get_screenshot","Bash(pnpm check:*)","Bash(/opt/homebrew/bin/pnpm check:*)","Bash(npx tsc:*)","Bash(./bin/check:*)","WebSearch","Bash(gh api:*)","WebFetch(domain:developers.facebook.com)","Bash(pnpm tsc:*)","Bash(git add:*)","Bash(git commit:*)","Bash(git branch:*)","Bash(gh pr view:*)","Bash(gh pr diff:*)","mcp__better-auth__search","Bash(gh pr edit:*)","WebFetch(domain:neon.com)","WebFetch(domain:raw.githubusercontent.com)","WebFetch(domain:dotenvx.com)","WebFetch(domain:github.com)","WebFetch(domain:motion.dev)","WebFetch(domain:blog.croct.com)","WebFetch(domain:www.embla-carousel.com)","WebFetch(domain:splidejs.com)","WebFetch(domain:koenvg.medium.com)","Bash(git worktree:*)","Bash(./bin/pnpm add:*)","WebFetch(domain:containers.dev)","Bash(git push:*)","Bash(chmod:*)","Bash(/opt/homebrew/bin/pnpm tsc:*)","Bash(npx @dotenvx/dotenvx set:*)","Bash(npx @dotenvx/dotenvx get:*)","Bash(docker inspect:*)","Bash(docker pull:*)","Bash(docker run --rm neondatabase/neon_local:latest sh -c \"curl -fsS https://dotenvx.sh | sh && which dotenvx || find / -name dotenvx 2>/dev/null\")","Bash(docker run --rm neondatabase/neon_local:latest sh -c \"cat /etc/os-release && which apk || which apt-get || which yum\")","Bash(docker build:*)","Bash(docker run --rm test-neon-local sh -c \"which dotenvx || find / -name ''dotenvx*'' 2>/dev/null | head -5\")","Bash(docker compose build:*)","Bash(docker compose run:*)","Bash(docker compose:*)","Bash(docker rmi:*)","Bash(xargs:*)","WebFetch(domain:zenn.dev)","Bash(git mv:*)","Bash(npx @dotenvx/dotenvx run:*)","Bash(fnm use:*)","Bash(npm run tsc:*)","Bash(node:*)","Bash(bash -n:*)","Bash(./bin/runenv sh:*)","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__list_pages","Bash(git fetch:*)","Bash(./bin/pnpm tsc:*)","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__click","Bash(gh pr create:*)","Bash(npx dotenvx:*)","Bash(neon projects:*)","Bash(./bin/setup:*)","Bash(neon branches list:*)","Bash(npm view:*)","Bash(pnpm update:*)","Bash(./bin/pnpm update:*)","Bash(./bin/pnpm biome migrate:*)","Bash(gh pr checkout:*)","WebFetch(domain:biomejs.dev)","Bash(./bin/pnpm ci:check:*)","Bash(gh pr:*)","Bash(./bin/pnpm lint:*)","WebFetch(domain:google.github.io)","WebFetch(domain:basarat.gitbook.io)","WebFetch(domain:deploy-preview-26--soypoy-portal.netlify.app)","WebFetch(domain:docs.coderabbit.ai)","Bash(lsof:*)","Bash(npx svgo:*)","Bash(head:*)","mcp__chrome-devtools__list_console_messages","WebFetch(domain:orm.drizzle.team)","Bash(export PATH=\"$HOME/.local/share/pnpm:$PATH\")","Bash(find:*)","Bash(git checkout:*)","Bash(git reset:*)","Bash(git -C /Users/masanao/Dev/soypoy-potal status)","Bash(git -C /Users/masanao/Dev/soypoy-potal diff --stat)","Bash(git -C /Users/masanao/Dev/soypoy-potal log --oneline -5)","Bash(git pull:*)","Bash(/Users/masanao/Dev/soypoy-potal/bin/check:*)","Bash(export PATH=\"$HOME/.local/share/pnpm:$HOME/.corepack/bin:$HOME/.npm-global/bin:$HOME/.volta/bin:/usr/local/bin:$PATH\")","Bash(corepack enable:*)","Bash(/Users/masanao/Dev/soypoy-potal-trpc-update/bin/pnpm update:*)","WebFetch(domain:pnpm.io)","Bash(./bin/pnpm ls:*)","Bash(curl:*)","Bash(pnpm dlx:*)","WebFetch(domain:zod.dev)","Bash(./bin/node:*)","Bash(pnpm ls:*)","Bash(git stash:*)","Bash(git stash pop:*)","Bash(gh run view:*)","mcp__chrome-devtools__resize_page","Bash(gh issue view:*)","WebFetch(domain:caniuse.com)","WebFetch(domain:bugs.webkit.org)","Bash(grep:*)","Bash(pnpm lint:*)","Bash(pnpm remove:*)","mcp__next-devtools__nextjs_docs","Bash(git -C /Users/masanao/Dev/soypoy-potal log --oneline --all)","Bash(git -C /Users/masanao/Dev/soypoy-potal show effa0ae --stat)","Bash(git -C /Users/masanao/Dev/soypoy-potal show:*)","Bash(git -C /Users/masanao/Dev/soypoy-potal log --oneline origin/netlify-lint)","Bash(git -C /Users/masanao/Dev/soypoy-potal branch:*)","Bash(python3:*)","Bash(npm info:*)","WebFetch(domain:docs.astro.build)","WebFetch(domain:octahedroid.com)","WebFetch(domain:getlate.dev)","WebFetch(domain:elfsight.com)","Bash(git -C /Users/masanao/Dev/soypoy-potal log --oneline -20)","Bash(git -C /Users/masanao/Dev/soypoy-potal config --list)","WebFetch(domain:blog.cloudflare.com)","WebFetch(domain:developers.cloudflare.com)","WebFetch(domain:www.brycewray.com)","Bash(pnpm list:*)","Bash(ps:*)","Bash(./bin/pnpm dlx shadcn@latest add:*)","Bash(git -C /Users/masanao/Dev/soypoy-potal diff)","Bash(git -C /Users/masanao/Dev/soypoy-potal log main...HEAD --oneline)","Bash(git -C /Users/masanao/Dev/soypoy-potal diff main...HEAD --stat)","Bash(git -C /Users/masanao/Dev/soypoy-potal push -u origin chore/extend/text-area)","Bash(./bin/pnpm check:*)","Bash(./bin/pnpm drzl:gen:*)","Bash(gh issue list:*)","Bash(git rm:*)","Bash(sips:*)","Bash(wc -c /Users/masanao/Dev/soypoy-potal/node_modules/tw-animate-css/dist/*.css 2>/dev/null || wc -c /Users/masanao/Dev/soypoy-potal/node_modules/tw-animate-css/*.css 2>/dev/null)","Bash(tail:*)","Bash(ffprobe:*)","Bash(identify:*)","Bash(git diff:*)","Bash(cd:*)","Bash(git:*)","WebFetch(domain:fonts.google.com)","WebFetch(domain:fontsource.org)","WebFetch(domain:web.dev)","Bash(file:*)","Bash(wc:*)","Bash(./bin/build:*)","Bash(./bin/pnpm install:*)"]
+2026-03-04T13:53:48.304Z [DEBUG] High write ratio: blit=0, write=24108 (100.0% writes), screen=482x146
+2026-03-04T13:53:48.322Z [DEBUG] Writing to temp file: /Users/masanao/.claude.json.tmp.78383.1772632428322
+2026-03-04T13:53:48.322Z [DEBUG] Preserving file permissions: 100600
+2026-03-04T13:53:48.322Z [DEBUG] Temp file written successfully, size: 33981 bytes
+2026-03-04T13:53:48.322Z [DEBUG] Applied original permissions to temp file
+2026-03-04T13:53:48.322Z [DEBUG] Renaming /Users/masanao/.claude.json.tmp.78383.1772632428322 to /Users/masanao/.claude.json
+2026-03-04T13:53:48.322Z [DEBUG] File /Users/masanao/.claude.json written atomically
+2026-03-04T13:53:48.352Z [DEBUG] Writing to temp file: /Users/masanao/.claude.json.tmp.78383.1772632428352
+2026-03-04T13:53:48.352Z [DEBUG] Preserving file permissions: 100600
+2026-03-04T13:53:48.352Z [DEBUG] Temp file written successfully, size: 33981 bytes
+2026-03-04T13:53:48.352Z [DEBUG] Applied original permissions to temp file
+2026-03-04T13:53:48.352Z [DEBUG] Renaming /Users/masanao/.claude.json.tmp.78383.1772632428352 to /Users/masanao/.claude.json
+2026-03-04T13:53:48.352Z [DEBUG] File /Users/masanao/.claude.json written atomically
+2026-03-04T13:53:54.291Z [ERROR] Error: Error: 1P event logging: 1 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T13:53:54.291Z [ERROR] Error: Error: {"message":"Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T13:53:54.291Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:07:01.381Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:07:01.382Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:07:01.383Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:07:01.383Z [DEBUG] Successfully updated to version 2.1.68
+2026-03-04T14:07:06.068Z [ERROR] Error: Error: 1P event logging: 6 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:07:06.069Z [ERROR] Error: Error: {"message":"Failed to export 6 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 6 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:07:06.069Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 6 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 6 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:08:17.575Z [DEBUG] High write ratio: blit=8906, write=22148 (71.3% writes), screen=482x146
+2026-03-04T14:08:22.074Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-04T14:08:22.324Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:08:22.326Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:08:22.326Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:08:22.326Z [DEBUG] Successfully updated to version 2.1.68
+2026-03-04T14:08:24.033Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-04T14:08:24.314Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:08:24.315Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:08:24.315Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:08:24.315Z [DEBUG] Successfully updated to version 2.1.68
+2026-03-04T14:08:25.396Z [DEBUG] Getting matching hook commands for SessionEnd with query: clear
+2026-03-04T14:08:25.396Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:25.396Z [DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+2026-03-04T14:08:25.396Z [DEBUG] Cleared all session hooks for session 2f35f4ae-cc20-4718-873e-83b9421248a4
+2026-03-04T14:08:25.399Z [DEBUG] Getting matching hook commands for SessionStart with query: clear
+2026-03-04T14:08:25.399Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:25.399Z [DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+2026-03-04T14:08:25.401Z [DEBUG] FileHistory: Added snapshot for 8af185a3-a495-4f3d-ab17-6706e26c4157, tracking 0 files
+2026-03-04T14:08:25.740Z [DEBUG] High write ratio: blit=0, write=24136 (100.0% writes), screen=486x146
+2026-03-04T14:08:25.744Z [DEBUG] Writing to temp file: /Users/masanao/.claude.json.tmp.78383.1772633305744
+2026-03-04T14:08:25.744Z [DEBUG] Preserving file permissions: 100600
+2026-03-04T14:08:25.744Z [DEBUG] Temp file written successfully, size: 33969 bytes
+2026-03-04T14:08:25.745Z [DEBUG] Applied original permissions to temp file
+2026-03-04T14:08:25.745Z [DEBUG] Renaming /Users/masanao/.claude.json.tmp.78383.1772633305744 to /Users/masanao/.claude.json
+2026-03-04T14:08:25.745Z [DEBUG] File /Users/masanao/.claude.json written atomically
+2026-03-04T14:08:25.749Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:08:25.773Z [DEBUG] High write ratio: blit=0, write=24136 (100.0% writes), screen=486x146
+2026-03-04T14:08:25.775Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-03-04T14:08:25.775Z [DEBUG] [claudeai-mcp] Gate returned: true
+2026-03-04T14:08:25.775Z [DEBUG] [claudeai-mcp] Fetching from https://api.anthropic.com/v1/mcp_servers?limit=1000
+2026-03-04T14:08:25.775Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-04T14:08:25.796Z [DEBUG] Full reset (shrink->below): prevHeight=486, nextHeight=12, viewport=91
+2026-03-04T14:08:25.797Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:08:25.832Z [DEBUG] Writing to temp file: /Users/masanao/.claude.json.tmp.78383.1772633305832
+2026-03-04T14:08:25.832Z [DEBUG] Preserving file permissions: 100600
+2026-03-04T14:08:25.832Z [DEBUG] Temp file written successfully, size: 33969 bytes
+2026-03-04T14:08:25.832Z [DEBUG] Applied original permissions to temp file
+2026-03-04T14:08:25.832Z [DEBUG] Renaming /Users/masanao/.claude.json.tmp.78383.1772633305832 to /Users/masanao/.claude.json
+2026-03-04T14:08:25.832Z [DEBUG] File /Users/masanao/.claude.json written atomically
+2026-03-04T14:08:26.019Z [DEBUG] [claudeai-mcp] Fetch failed
+2026-03-04T14:08:26.040Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:08:26.040Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:08:26.040Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:08:26.040Z [DEBUG] Successfully updated to version 2.1.68
+2026-03-04T14:08:27.116Z [ERROR] Error: Error: 1P event logging: 24 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:27.117Z [ERROR] Error: Error: {"message":"Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:27.117Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:08:39.599Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/masanao/.claude/skills, project=[]
+2026-03-04T14:08:39.600Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:08:39.600Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:08:39.601Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:08:39.601Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:08:39.601Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-03-04T14:08:39.601Z [DEBUG] Total plugin skills loaded: 0
+2026-03-04T14:08:39.601Z [DEBUG] Total plugin commands loaded: 0
+2026-03-04T14:08:39.611Z [DEBUG] Loaded 1 unique skills (1 unconditional, 0 conditional, managed: 0, user: 0, project: 0, additional: 0, legacy commands: 1)
+2026-03-04T14:08:39.615Z [DEBUG] getSkills returning: 1 skill dir commands, 0 plugin skills, 3 bundled skills
+2026-03-04T14:08:39.615Z [DEBUG] Sending 3 skills via attachment (initial, 3 total sent)
+2026-03-04T14:08:39.617Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-04T14:08:39.617Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:39.617Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:08:39.618Z [DEBUG] FileHistory: Making snapshot for message ab52d10a-c38e-446c-a241-b35562a618b3
+2026-03-04T14:08:39.618Z [DEBUG] FileHistory: Added snapshot for ab52d10a-c38e-446c-a241-b35562a618b3, tracking 0 files
+2026-03-04T14:08:39.618Z [DEBUG] [useDeferredValue] Messages deferred by 2 (3→5)
+2026-03-04T14:08:39.622Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:08:39.708Z [DEBUG] autocompact: tokens=512 threshold=167000 effectiveWindow=180000
+2026-03-04T14:08:39.710Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:08:39.713Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:08:39.714Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:08:39.714Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:08:39.739Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:08:43.115Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:08:43.805Z [DEBUG] [useDeferredValue] Messages deferred by 1 (5→6)
+2026-03-04T14:08:44.633Z [ERROR] Error: Error: 1P event logging: 16 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:44.633Z [ERROR] Error: Error: {"message":"Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:44.633Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:08:44.801Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-04T14:08:44.802Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-04T14:08:44.802Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:44.802Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-04T14:08:44.820Z [DEBUG] Snapshot file missing, recreating: /Users/masanao/.claude/shell-snapshots/snapshot-zsh-1772212052706-aw84cq.sh
+2026-03-04T14:08:44.820Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-03-04T14:08:44.820Z [DEBUG] Looking for shell config file: /Users/masanao/.zshrc
+2026-03-04T14:08:44.821Z [DEBUG] [useDeferredValue] Messages deferred by 1 (6→7)
+2026-03-04T14:08:44.825Z [DEBUG] Snapshots directory: /Users/masanao/.claude/shell-snapshots
+2026-03-04T14:08:44.832Z [DEBUG] Creating snapshot at: /Users/masanao/.claude/shell-snapshots/snapshot-zsh-1772633324825-hgsv91.sh
+2026-03-04T14:08:44.832Z [DEBUG] Execution timeout: 10000ms
+2026-03-04T14:08:45.154Z [DEBUG] Shell snapshot created successfully (52441 bytes)
+2026-03-04T14:08:45.154Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-04T14:08:45.578Z [DEBUG] Bash tool error (764ms): Shell command failed
+2026-03-04T14:08:45.578Z [DEBUG] Getting matching hook commands for PostToolUseFailure with query: Bash
+2026-03-04T14:08:45.578Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:45.578Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-04T14:08:45.579Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:08:45.579Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:08:45.579Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:08:45.579Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:08:45.580Z [DEBUG] autocompact: tokens=37141 threshold=167000 effectiveWindow=180000
+2026-03-04T14:08:45.580Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:08:45.581Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:08:45.582Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:08:45.582Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:08:45.582Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:08:45.585Z [DEBUG] [useDeferredValue] Messages deferred by 1 (7→8)
+2026-03-04T14:08:49.526Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:08:49.838Z [ERROR] Error: Error: 1P event logging: 21 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:49.838Z [ERROR] Error: Error: {"message":"Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:49.838Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:08:50.363Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-04T14:08:50.364Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-04T14:08:50.364Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:50.364Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-04T14:08:50.371Z [DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "./bin/runenv gh pr view 101 --repo syosyo10337/soypoy-portal --json title,body,files,commits"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+2026-03-04T14:08:50.372Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2026-03-04T14:08:50.372Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2026-03-04T14:08:50.372Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:08:50.372Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-04T14:08:50.374Z [DEBUG] [useDeferredValue] Messages deferred by 1 (8→9)
+2026-03-04T14:08:50.385Z [DEBUG] High write ratio: blit=0, write=1096 (100.0% writes), screen=32x146
+2026-03-04T14:08:50.386Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:08:50.388Z [DEBUG] [useDeferredValue] Messages deferred by 1 (8→9)
+2026-03-04T14:08:50.401Z [DEBUG] High write ratio: blit=0, write=1133 (100.0% writes), screen=35x146
+2026-03-04T14:08:55.398Z [ERROR] Error: Error: 1P event logging: 5 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:55.398Z [ERROR] Error: Error: {"message":"Failed to export 5 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 5 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:08:55.398Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 5 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 5 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:00.866Z [DEBUG] Persisting permission update: addRules to source 'localSettings'
+2026-03-04T14:09:00.866Z [DEBUG] Persisting 1 allow rule(s) to localSettings
+2026-03-04T14:09:00.873Z [DEBUG] Writing to temp file: /Users/masanao/Dev/soypoy-potal/.claude/settings.local.json.tmp.78383.1772633340873
+2026-03-04T14:09:00.873Z [DEBUG] Preserving file permissions: 100644
+2026-03-04T14:09:00.874Z [DEBUG] Temp file written successfully, size: 6805 bytes
+2026-03-04T14:09:00.874Z [DEBUG] Applied original permissions to temp file
+2026-03-04T14:09:00.874Z [DEBUG] Renaming /Users/masanao/Dev/soypoy-potal/.claude/settings.local.json.tmp.78383.1772633340873 to /Users/masanao/Dev/soypoy-potal/.claude/settings.local.json
+2026-03-04T14:09:00.875Z [DEBUG] File /Users/masanao/Dev/soypoy-potal/.claude/settings.local.json written atomically
+2026-03-04T14:09:00.881Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(./bin/runenv gh:*)"]
+2026-03-04T14:09:00.885Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-04T14:09:00.895Z [DEBUG] High write ratio: blit=0, write=1007 (100.0% writes), screen=27x146
+2026-03-04T14:09:00.897Z [DEBUG] Writing to temp file: /Users/masanao/.claude.json.tmp.78383.1772633340897
+2026-03-04T14:09:00.897Z [DEBUG] Preserving file permissions: 100600
+2026-03-04T14:09:00.897Z [DEBUG] Temp file written successfully, size: 33969 bytes
+2026-03-04T14:09:00.897Z [DEBUG] Applied original permissions to temp file
+2026-03-04T14:09:00.897Z [DEBUG] Renaming /Users/masanao/.claude.json.tmp.78383.1772633340897 to /Users/masanao/.claude.json
+2026-03-04T14:09:00.898Z [DEBUG] File /Users/masanao/.claude.json written atomically
+2026-03-04T14:09:00.899Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:09:00.902Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-04T14:09:00.915Z [DEBUG] Writing to temp file: /Users/masanao/.claude.json.tmp.78383.1772633340915
+2026-03-04T14:09:00.915Z [DEBUG] Preserving file permissions: 100600
+2026-03-04T14:09:00.915Z [DEBUG] Temp file written successfully, size: 33969 bytes
+2026-03-04T14:09:00.915Z [DEBUG] Applied original permissions to temp file
+2026-03-04T14:09:00.915Z [DEBUG] Renaming /Users/masanao/.claude.json.tmp.78383.1772633340915 to /Users/masanao/.claude.json
+2026-03-04T14:09:00.915Z [DEBUG] File /Users/masanao/.claude.json written atomically
+2026-03-04T14:09:01.201Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:09:01.201Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:09:01.201Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:09:01.201Z [DEBUG] Successfully updated to version 2.1.68
+2026-03-04T14:09:02.073Z [DEBUG] Bash tool error (1190ms): Shell command failed
+2026-03-04T14:09:02.073Z [DEBUG] Getting matching hook commands for PostToolUseFailure with query: Bash
+2026-03-04T14:09:02.073Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:02.073Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-04T14:09:02.074Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:09:02.074Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:09:02.074Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:09:02.074Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:09:02.074Z [DEBUG] autocompact: tokens=37435 threshold=167000 effectiveWindow=180000
+2026-03-04T14:09:02.074Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:09:02.075Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:02.075Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:02.075Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:02.075Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:02.076Z [DEBUG] [useDeferredValue] Messages deferred by 1 (9→10)
+2026-03-04T14:09:02.079Z [DEBUG] High write ratio: blit=0, write=1007 (100.0% writes), screen=27x146
+2026-03-04T14:09:02.097Z [DEBUG] High write ratio: blit=0, write=1689 (100.0% writes), screen=36x146
+2026-03-04T14:09:05.910Z [ERROR] Error: Error: 1P event logging: 24 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:05.910Z [ERROR] Error: Error: {"message":"Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:05.910Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 24 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:06.012Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:06.537Z [DEBUG] [useDeferredValue] Messages deferred by 1 (10→11)
+2026-03-04T14:09:06.546Z [DEBUG] High write ratio: blit=0, write=1689 (100.0% writes), screen=36x146
+2026-03-04T14:09:06.563Z [DEBUG] High write ratio: blit=0, write=1763 (100.0% writes), screen=38x146
+2026-03-04T14:09:07.461Z [DEBUG] executePreToolHooks called for tool: WebFetch
+2026-03-04T14:09:07.462Z [DEBUG] Getting matching hook commands for PreToolUse with query: WebFetch
+2026-03-04T14:09:07.462Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:07.462Z [DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+2026-03-04T14:09:07.467Z [DEBUG] [useDeferredValue] Messages deferred by 1 (11→12)
+2026-03-04T14:09:07.476Z [DEBUG] High write ratio: blit=0, write=1763 (100.0% writes), screen=38x146
+2026-03-04T14:09:07.496Z [DEBUG] High write ratio: blit=0, write=1838 (100.0% writes), screen=41x146
+2026-03-04T14:09:08.573Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-04T14:09:08.573Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.b0e; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:08.573Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:08.573Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:08.573Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:08.581Z [DEBUG] High write ratio: blit=1314, write=1651 (55.7% writes), screen=41x146
+2026-03-04T14:09:10.210Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:11.582Z [ERROR] Error: Error: 1P event logging: 15 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:11.582Z [ERROR] Error: Error: {"message":"Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:11.582Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:12.721Z [DEBUG] Getting matching hook commands for PostToolUse with query: WebFetch
+2026-03-04T14:09:12.721Z [DEBUG] Found 5 hook matchers in settings
+2026-03-04T14:09:12.721Z [DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+2026-03-04T14:09:12.722Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:09:12.722Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:09:12.723Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:09:12.723Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:09:12.723Z [DEBUG] autocompact: tokens=37928 threshold=167000 effectiveWindow=180000
+2026-03-04T14:09:12.723Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:09:12.726Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:12.726Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:12.726Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:12.727Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:12.728Z [DEBUG] [useDeferredValue] Messages deferred by 1 (12→13)
+2026-03-04T14:09:12.735Z [DEBUG] High write ratio: blit=0, write=1824 (100.0% writes), screen=40x146
+2026-03-04T14:09:12.753Z [DEBUG] High write ratio: blit=0, write=1854 (100.0% writes), screen=41x146
+2026-03-04T14:09:15.753Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:15.770Z [DEBUG] High write ratio: blit=0, write=1898 (100.0% writes), screen=43x146
+2026-03-04T14:09:16.576Z [DEBUG] executePreToolHooks called for tool: Grep
+2026-03-04T14:09:16.577Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2026-03-04T14:09:16.577Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:16.577Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-04T14:09:16.586Z [DEBUG] Grep tool error (5ms): ENOENT: no such file or directory, posix_spawn '/Users/masanao/.local/share/claude/versions/2.1.62'
+2026-03-04T14:09:16.586Z [ERROR] Error: Error: ENOENT: no such file or directory, posix_spawn '/Users/masanao/.local/share/claude/versions/2.1.62'
+    at spawn (unknown)
+    at spawn (node:child_process:667:35)
+    at spawn (node:child_process:14:39)
+    at execFile (node:child_process:59:20)
+    at DO9 (/$bunfs/root/claude:114:18419)
+    at <anonymous> (/$bunfs/root/claude:116:385)
+    at new Promise (native:1:11)
+    at GM (/$bunfs/root/claude:114:18608)
+    at call (/$bunfs/root/claude:2721:1131)
+    at async HL8 (/$bunfs/root/claude:3510:15034)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:16.587Z [DEBUG] Getting matching hook commands for PostToolUseFailure with query: Grep
+2026-03-04T14:09:16.587Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:16.587Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-04T14:09:16.588Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:09:16.588Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:09:16.588Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:09:16.588Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:09:16.588Z [DEBUG] autocompact: tokens=38089 threshold=167000 effectiveWindow=180000
+2026-03-04T14:09:16.589Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:09:16.591Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:16.592Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:16.592Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:16.592Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:16.594Z [DEBUG] [useDeferredValue] Messages deferred by 2 (13→15)
+2026-03-04T14:09:16.601Z [DEBUG] High write ratio: blit=0, write=1854 (100.0% writes), screen=41x146
+2026-03-04T14:09:16.616Z [DEBUG] High write ratio: blit=0, write=1912 (100.0% writes), screen=44x146
+2026-03-04T14:09:17.746Z [ERROR] Error: Error: 1P event logging: 33 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:17.746Z [ERROR] Error: Error: {"message":"Failed to export 33 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 33 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:17.746Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 33 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 33 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:20.052Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:20.062Z [DEBUG] High write ratio: blit=0, write=1913 (100.0% writes), screen=44x146
+2026-03-04T14:09:20.289Z [DEBUG] executePreToolHooks called for tool: Grep
+2026-03-04T14:09:20.290Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2026-03-04T14:09:20.290Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:20.290Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-04T14:09:20.293Z [DEBUG] Grep tool error (2ms): ENOENT: no such file or directory, posix_spawn '/Users/masanao/.local/share/claude/versions/2.1.62'
+2026-03-04T14:09:20.293Z [ERROR] Error: Error: ENOENT: no such file or directory, posix_spawn '/Users/masanao/.local/share/claude/versions/2.1.62'
+    at spawn (unknown)
+    at spawn (node:child_process:667:35)
+    at spawn (node:child_process:14:39)
+    at execFile (node:child_process:59:20)
+    at DO9 (/$bunfs/root/claude:114:18419)
+    at <anonymous> (/$bunfs/root/claude:116:385)
+    at new Promise (native:1:11)
+    at GM (/$bunfs/root/claude:114:18608)
+    at call (/$bunfs/root/claude:2721:1131)
+    at async HL8 (/$bunfs/root/claude:3510:15034)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:20.293Z [DEBUG] Getting matching hook commands for PostToolUseFailure with query: Grep
+2026-03-04T14:09:20.293Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:20.293Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-04T14:09:20.293Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:09:20.293Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:09:20.293Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:09:20.293Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:09:20.294Z [DEBUG] autocompact: tokens=38253 threshold=167000 effectiveWindow=180000
+2026-03-04T14:09:20.294Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:09:20.296Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:20.296Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:20.296Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:20.296Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:20.298Z [DEBUG] [useDeferredValue] Messages deferred by 2 (15→17)
+2026-03-04T14:09:20.304Z [DEBUG] High write ratio: blit=0, write=1932 (100.0% writes), screen=44x146
+2026-03-04T14:09:20.319Z [DEBUG] High write ratio: blit=0, write=1932 (100.0% writes), screen=44x146
+2026-03-04T14:09:25.318Z [ERROR] Error: Error: 1P event logging: 17 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:25.318Z [ERROR] Error: Error: {"message":"Failed to export 17 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 17 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:25.318Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 17 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 17 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:26.197Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:26.209Z [DEBUG] High write ratio: blit=0, write=1948 (100.0% writes), screen=44x146
+2026-03-04T14:09:26.226Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-04T14:09:26.226Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-04T14:09:26.226Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:26.226Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-04T14:09:26.229Z [DEBUG] [useDeferredValue] Messages deferred by 1 (17→18)
+2026-03-04T14:09:26.236Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-04T14:09:26.236Z [DEBUG] Found 5 hook matchers in settings
+2026-03-04T14:09:26.236Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-04T14:09:26.238Z [DEBUG] [useDeferredValue] Messages deferred by 1 (17→18)
+2026-03-04T14:09:26.243Z [DEBUG] High write ratio: blit=0, write=1948 (100.0% writes), screen=44x146
+2026-03-04T14:09:26.264Z [DEBUG] High write ratio: blit=0, write=1951 (100.0% writes), screen=44x146
+2026-03-04T14:09:26.309Z [DEBUG] [useDeferredValue] Messages deferred by 3 (18→21)
+2026-03-04T14:09:26.316Z [DEBUG] High write ratio: blit=0, write=1951 (100.0% writes), screen=44x146
+2026-03-04T14:09:26.317Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:09:26.317Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:09:26.317Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:09:26.317Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:09:26.318Z [DEBUG] autocompact: tokens=39248 threshold=167000 effectiveWindow=180000
+2026-03-04T14:09:26.318Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:09:26.320Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:26.321Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:26.321Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:26.321Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:26.322Z [DEBUG] [useDeferredValue] Messages deferred by 3 (18→21)
+2026-03-04T14:09:26.334Z [DEBUG] High write ratio: blit=0, write=1951 (100.0% writes), screen=44x146
+2026-03-04T14:09:26.353Z [DEBUG] High write ratio: blit=0, write=1951 (100.0% writes), screen=44x146
+2026-03-04T14:09:28.751Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:31.250Z [ERROR] Error: Error: 1P event logging: 23 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:31.250Z [ERROR] Error: Error: {"message":"Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:31.250Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:31.548Z [DEBUG] [useDeferredValue] Messages deferred by 1 (21→22)
+2026-03-04T14:09:31.559Z [DEBUG] [useDeferredValue] Messages deferred by 1 (21→22)
+2026-03-04T14:09:31.597Z [DEBUG] High write ratio: blit=0, write=1968 (100.0% writes), screen=44x146
+2026-03-04T14:09:36.248Z [DEBUG] [useDeferredValue] Messages deferred by 1 (22→23)
+2026-03-04T14:09:36.289Z [DEBUG] High write ratio: blit=0, write=2641 (100.0% writes), screen=54x146
+2026-03-04T14:09:36.316Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-04T14:09:36.316Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:36.316Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:09:36.317Z [DEBUG] autocompact: tokens=40646 threshold=167000 effectiveWindow=180000
+2026-03-04T14:09:36.319Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:09:36.322Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:09:36.322Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:09:36.322Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:09:36.322Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:09:36.325Z [DEBUG] [useDeferredValue] Messages deferred by 1 (23→24)
+2026-03-04T14:09:36.331Z [DEBUG] High write ratio: blit=0, write=2625 (100.0% writes), screen=54x146
+2026-03-04T14:09:36.332Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:09:36.596Z [ERROR] Error: Error: 1P event logging: 13 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:36.596Z [ERROR] Error: Error: {"message":"Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:36.596Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:09:41.188Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:09:41.195Z [DEBUG] Forked agent [prompt_suggestion] received message: type=assistant
+2026-03-04T14:09:41.267Z [DEBUG] Getting matching hook commands for SubagentStop with query:
+2026-03-04T14:09:41.267Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:09:41.267Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:09:41.268Z [DEBUG] Forked agent [prompt_suggestion] finished: 1 messages, types=[assistant], totalUsage: input=295 output=5 cacheRead=40019 cacheCreate=348
+2026-03-04T14:09:41.268Z [DEBUG] [Speculation] enabled=false
+2026-03-04T14:09:46.291Z [ERROR] Error: Error: 1P event logging: 2 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:46.292Z [ERROR] Error: Error: {"message":"Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:09:46.292Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:10:36.338Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
+2026-03-04T14:10:36.338Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:10:36.338Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
+2026-03-04T14:10:41.447Z [ERROR] Error: Error: 1P event logging: 1 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:10:41.447Z [ERROR] Error: Error: {"message":"Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:10:41.447Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:11:52.544Z [DEBUG] High write ratio: blit=1314, write=2445 (65.0% writes), screen=54x146
+2026-03-04T14:12:21.025Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:12:21.025Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:12:21.026Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:12:21.026Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:12:21.028Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-04T14:12:21.028Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:12:21.028Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:12:21.028Z [DEBUG] FileHistory: Making snapshot for message e79e1777-8eb5-42c8-a86e-3f3265637af5
+2026-03-04T14:12:21.028Z [DEBUG] FileHistory: Added snapshot for e79e1777-8eb5-42c8-a86e-3f3265637af5, tracking 0 files
+2026-03-04T14:12:21.030Z [DEBUG] [useDeferredValue] Messages deferred by 1 (24→25)
+2026-03-04T14:12:21.043Z [DEBUG] High write ratio: blit=0, write=2663 (100.0% writes), screen=58x146
+2026-03-04T14:12:21.047Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:12:21.049Z [DEBUG] autocompact: tokens=40376 threshold=167000 effectiveWindow=180000
+2026-03-04T14:12:21.050Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:12:21.053Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:12:21.053Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:12:21.053Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:12:21.053Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:12:21.061Z [DEBUG] [useDeferredValue] Messages deferred by 1 (24→25)
+2026-03-04T14:12:21.084Z [DEBUG] High write ratio: blit=0, write=2663 (100.0% writes), screen=58x146
+2026-03-04T14:12:25.303Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:12:26.047Z [ERROR] Error: Error: 1P event logging: 15 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:12:26.047Z [ERROR] Error: Error: {"message":"Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:12:26.047Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 15 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:12:29.030Z [DEBUG] [useDeferredValue] Messages deferred by 1 (25→26)
+2026-03-04T14:12:29.047Z [DEBUG] High write ratio: blit=0, write=2908 (100.0% writes), screen=65x146
+2026-03-04T14:12:29.051Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-04T14:12:29.051Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:12:29.051Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:12:29.051Z [DEBUG] autocompact: tokens=40849 threshold=167000 effectiveWindow=180000
+2026-03-04T14:12:29.053Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:12:29.056Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:12:29.056Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:12:29.056Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:12:29.056Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:12:29.067Z [DEBUG] High write ratio: blit=0, write=2894 (100.0% writes), screen=63x146
+2026-03-04T14:12:29.067Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:12:34.159Z [ERROR] Error: Error: 1P event logging: 11 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:12:34.159Z [ERROR] Error: Error: {"message":"Failed to export 11 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 11 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:12:34.159Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 11 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 11 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:12:34.471Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:12:34.708Z [DEBUG] Forked agent [prompt_suggestion] received message: type=assistant
+2026-03-04T14:12:34.736Z [DEBUG] Getting matching hook commands for SubagentStop with query:
+2026-03-04T14:12:34.736Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:12:34.736Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:12:34.736Z [DEBUG] Forked agent [prompt_suggestion] finished: 1 messages, types=[assistant], totalUsage: input=295 output=8 cacheRead=40384 cacheCreate=187
+2026-03-04T14:12:38.148Z [DEBUG] High write ratio: blit=1314, write=2707 (67.3% writes), screen=63x146
+2026-03-04T14:12:39.757Z [ERROR] Error: Error: 1P event logging: 3 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:12:39.757Z [ERROR] Error: Error: {"message":"Failed to export 3 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 3 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:12:39.757Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 3 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 3 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:13:14.740Z [DEBUG] detectFileEncoding failed for expected reason: ENOENT
+2026-03-04T14:14:12.247Z [DEBUG] High write ratio: blit=1314, write=2707 (67.3% writes), screen=63x146
+2026-03-04T14:14:16.995Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:14:16.995Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:14:16.995Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:14:16.995Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:14:16.997Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-04T14:14:16.997Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:14:16.997Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:14:16.997Z [DEBUG] FileHistory: Making snapshot for message c7903066-6db8-42d8-9d06-a6e65234af33
+2026-03-04T14:14:16.997Z [DEBUG] FileHistory: Added snapshot for c7903066-6db8-42d8-9d06-a6e65234af33, tracking 0 files
+2026-03-04T14:14:16.999Z [DEBUG] [useDeferredValue] Messages deferred by 1 (26→27)
+2026-03-04T14:14:17.010Z [DEBUG] High write ratio: blit=0, write=2988 (100.0% writes), screen=67x146
+2026-03-04T14:14:17.026Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:14:17.029Z [DEBUG] autocompact: tokens=40594 threshold=167000 effectiveWindow=180000
+2026-03-04T14:14:17.030Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:14:17.033Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:14:17.033Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:14:17.033Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:14:17.034Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:14:17.041Z [DEBUG] [useDeferredValue] Messages deferred by 1 (26→27)
+2026-03-04T14:14:17.066Z [DEBUG] High write ratio: blit=0, write=2988 (100.0% writes), screen=67x146
+2026-03-04T14:14:17.312Z [DEBUG] High write ratio: blit=1314, write=2801 (68.1% writes), screen=67x146
+2026-03-04T14:14:21.200Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:14:21.772Z [DEBUG] [useDeferredValue] Messages deferred by 1 (27→28)
+2026-03-04T14:14:21.832Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-04T14:14:21.832Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:14:21.832Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:14:21.832Z [DEBUG] autocompact: tokens=40921 threshold=167000 effectiveWindow=180000
+2026-03-04T14:14:21.833Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:14:21.836Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:14:21.837Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:14:21.837Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:14:21.837Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:14:21.841Z [DEBUG] [useDeferredValue] Messages deferred by 1 (27→28)
+2026-03-04T14:14:21.848Z [DEBUG] High write ratio: blit=0, write=3055 (100.0% writes), screen=69x146
+2026-03-04T14:14:21.848Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:14:22.044Z [ERROR] Error: Error: 1P event logging: 30 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:22.044Z [ERROR] Error: Error: {"message":"Failed to export 30 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 30 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:22.044Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 30 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 30 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:14:24.618Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:14:24.619Z [DEBUG] Forked agent [prompt_suggestion] received message: type=assistant
+2026-03-04T14:14:24.654Z [DEBUG] Getting matching hook commands for SubagentStop with query:
+2026-03-04T14:14:24.654Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:14:24.654Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:14:24.654Z [DEBUG] Forked agent [prompt_suggestion] finished: 1 messages, types=[assistant], totalUsage: input=295 output=4 cacheRead=40592 cacheCreate=52
+2026-03-04T14:14:24.654Z [DEBUG] [Speculation] enabled=false
+2026-03-04T14:14:29.678Z [ERROR] Error: Error: 1P event logging: 2 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:29.679Z [ERROR] Error: Error: {"message":"Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:29.679Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 2 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:14:36.544Z [DEBUG] High write ratio: blit=1314, write=2870 (68.6% writes), screen=69x146
+2026-03-04T14:14:38.598Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:14:38.598Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:14:38.599Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:14:38.599Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:14:38.600Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-04T14:14:38.600Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:14:38.600Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:14:38.600Z [DEBUG] FileHistory: Making snapshot for message ae55577c-9cc6-4305-9baf-350372e856d1
+2026-03-04T14:14:38.601Z [DEBUG] FileHistory: Added snapshot for ae55577c-9cc6-4305-9baf-350372e856d1, tracking 0 files
+2026-03-04T14:14:38.603Z [DEBUG] [useDeferredValue] Messages deferred by 2 (28→30)
+2026-03-04T14:14:38.615Z [DEBUG] High write ratio: blit=0, write=3123 (100.0% writes), screen=73x146
+2026-03-04T14:14:38.618Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:14:38.620Z [DEBUG] autocompact: tokens=40788 threshold=167000 effectiveWindow=180000
+2026-03-04T14:14:38.620Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:14:38.622Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:14:38.622Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:14:38.622Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:14:38.622Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:14:38.629Z [DEBUG] [useDeferredValue] Messages deferred by 2 (28→30)
+2026-03-04T14:14:38.654Z [DEBUG] High write ratio: blit=0, write=3123 (100.0% writes), screen=73x146
+2026-03-04T14:14:39.065Z [DEBUG] High write ratio: blit=1314, write=2936 (69.1% writes), screen=73x146
+2026-03-04T14:14:42.824Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:14:42.838Z [DEBUG] High write ratio: blit=0, write=3123 (100.0% writes), screen=73x146
+2026-03-04T14:14:43.548Z [DEBUG] executePreToolHooks called for tool: WebFetch
+2026-03-04T14:14:43.549Z [DEBUG] Getting matching hook commands for PreToolUse with query: WebFetch
+2026-03-04T14:14:43.549Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:14:43.549Z [DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+2026-03-04T14:14:43.556Z [DEBUG] [useDeferredValue] Messages deferred by 1 (30→31)
+2026-03-04T14:14:43.568Z [DEBUG] High write ratio: blit=0, write=3123 (100.0% writes), screen=73x146
+2026-03-04T14:14:43.584Z [DEBUG] High write ratio: blit=0, write=3198 (100.0% writes), screen=76x146
+2026-03-04T14:14:43.675Z [ERROR] Error: Error: 1P event logging: 21 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:43.676Z [ERROR] Error: Error: {"message":"Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:43.676Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 21 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:14:44.546Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-04T14:14:44.546Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.b0e; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:14:44.546Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:14:44.546Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:14:44.546Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:14:45.766Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:14:49.489Z [DEBUG] Getting matching hook commands for PostToolUse with query: WebFetch
+2026-03-04T14:14:49.489Z [DEBUG] Found 5 hook matchers in settings
+2026-03-04T14:14:49.489Z [DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+2026-03-04T14:14:49.490Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:14:49.490Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:14:49.490Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:14:49.490Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:14:49.490Z [DEBUG] autocompact: tokens=41213 threshold=167000 effectiveWindow=180000
+2026-03-04T14:14:49.491Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:14:49.495Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:14:49.495Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:14:49.495Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:14:49.495Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:14:49.498Z [DEBUG] [useDeferredValue] Messages deferred by 1 (31→32)
+2026-03-04T14:14:49.510Z [DEBUG] High write ratio: blit=0, write=3184 (100.0% writes), screen=75x146
+2026-03-04T14:14:49.525Z [DEBUG] High write ratio: blit=0, write=3214 (100.0% writes), screen=76x146
+2026-03-04T14:14:49.571Z [ERROR] Error: Error: 1P event logging: 23 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:49.571Z [ERROR] Error: Error: {"message":"Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:14:49.571Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 23 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:14:52.477Z [DEBUG] High write ratio: blit=1314, write=3027 (69.7% writes), screen=76x146
+2026-03-04T14:14:53.510Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:14:53.948Z [DEBUG] High write ratio: blit=1314, write=3027 (69.7% writes), screen=76x146
+2026-03-04T14:14:56.636Z [DEBUG] [useDeferredValue] Messages deferred by 1 (32→33)
+2026-03-04T14:14:56.661Z [DEBUG] High write ratio: blit=0, write=3428 (100.0% writes), screen=85x146
+2026-03-04T14:14:56.664Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-04T14:14:56.664Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:14:56.664Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:14:56.664Z [DEBUG] autocompact: tokens=41684 threshold=167000 effectiveWindow=180000
+2026-03-04T14:14:56.664Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:14:56.667Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:14:56.667Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:14:56.667Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:14:56.667Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:14:56.677Z [DEBUG] High write ratio: blit=0, write=3416 (100.0% writes), screen=83x146
+2026-03-04T14:14:56.678Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:15:00.296Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:15:00.438Z [DEBUG] Forked agent [prompt_suggestion] received message: type=assistant
+2026-03-04T14:15:00.440Z [DEBUG] Getting matching hook commands for SubagentStop with query:
+2026-03-04T14:15:00.440Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:15:00.440Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:15:00.440Z [DEBUG] Forked agent [prompt_suggestion] finished: 1 messages, types=[assistant], totalUsage: input=295 output=9 cacheRead=41232 cacheCreate=174
+2026-03-04T14:15:01.674Z [ERROR] Error: Error: 1P event logging: 14 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:15:01.674Z [ERROR] Error: Error: {"message":"Failed to export 14 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 14 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:15:01.674Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 14 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 14 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:15:23.153Z [DEBUG] High write ratio: blit=1314, write=3229 (71.1% writes), screen=83x146
+2026-03-04T14:15:26.445Z [DEBUG] High write ratio: blit=1314, write=3229 (71.1% writes), screen=83x146
+2026-03-04T14:15:56.060Z [DEBUG] High write ratio: blit=1314, write=3229 (71.1% writes), screen=83x146
+2026-03-04T14:16:05.760Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:16:05.760Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:16:05.760Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:16:05.760Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:16:05.762Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-04T14:16:05.762Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:16:05.762Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:16:05.762Z [DEBUG] FileHistory: Making snapshot for message f21e1c6f-9bb5-411a-94ac-c1082e2d31f5
+2026-03-04T14:16:05.762Z [DEBUG] FileHistory: Added snapshot for f21e1c6f-9bb5-411a-94ac-c1082e2d31f5, tracking 0 files
+2026-03-04T14:16:05.763Z [DEBUG] [useDeferredValue] Messages deferred by 1 (33→34)
+2026-03-04T14:16:05.773Z [DEBUG] High write ratio: blit=0, write=3513 (100.0% writes), screen=87x146
+2026-03-04T14:16:05.777Z [DEBUG] Started caffeinate to prevent sleep
+2026-03-04T14:16:05.779Z [DEBUG] autocompact: tokens=41429 threshold=167000 effectiveWindow=180000
+2026-03-04T14:16:05.780Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:16:05.785Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:16:05.785Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:16:05.785Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:16:05.785Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:16:05.794Z [DEBUG] [useDeferredValue] Messages deferred by 1 (33→34)
+2026-03-04T14:16:05.819Z [DEBUG] High write ratio: blit=0, write=3513 (100.0% writes), screen=87x146
+2026-03-04T14:16:09.646Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:16:09.654Z [DEBUG] High write ratio: blit=0, write=3513 (100.0% writes), screen=87x146
+2026-03-04T14:16:10.165Z [DEBUG] executePreToolHooks called for tool: WebFetch
+2026-03-04T14:16:10.166Z [DEBUG] Getting matching hook commands for PreToolUse with query: WebFetch
+2026-03-04T14:16:10.166Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:16:10.166Z [DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+2026-03-04T14:16:10.171Z [DEBUG] [useDeferredValue] Messages deferred by 1 (34→35)
+2026-03-04T14:16:10.181Z [DEBUG] High write ratio: blit=0, write=3513 (100.0% writes), screen=87x146
+2026-03-04T14:16:10.197Z [DEBUG] High write ratio: blit=0, write=3587 (100.0% writes), screen=90x146
+2026-03-04T14:16:10.787Z [ERROR] Error: Error: 1P event logging: 22 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:10.788Z [ERROR] Error: Error: {"message":"Failed to export 22 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 22 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:10.788Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 22 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 22 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:16:11.295Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-04T14:16:11.295Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.b0e; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:16:11.295Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:16:11.295Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:16:11.295Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:16:12.267Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:16:16.314Z [ERROR] Error: Error: 1P event logging: 9 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:16.314Z [ERROR] Error: Error: {"message":"Failed to export 9 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 9 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:16.314Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 9 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 9 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:16:16.740Z [DEBUG] Getting matching hook commands for PostToolUse with query: WebFetch
+2026-03-04T14:16:16.740Z [DEBUG] Found 5 hook matchers in settings
+2026-03-04T14:16:16.740Z [DEBUG] Matched 0 unique hooks for query "WebFetch" (0 before deduplication)
+2026-03-04T14:16:16.741Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-04T14:16:16.741Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-04T14:16:16.741Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-04T14:16:16.741Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-04T14:16:16.742Z [DEBUG] autocompact: tokens=41944 threshold=167000 effectiveWindow=180000
+2026-03-04T14:16:16.742Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:16:16.745Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:16:16.746Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:16:16.746Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:16:16.746Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:16:16.749Z [DEBUG] [useDeferredValue] Messages deferred by 1 (35→36)
+2026-03-04T14:16:16.759Z [DEBUG] High write ratio: blit=0, write=3573 (100.0% writes), screen=89x146
+2026-03-04T14:16:16.777Z [DEBUG] High write ratio: blit=0, write=3603 (100.0% writes), screen=90x146
+2026-03-04T14:16:20.413Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:16:21.766Z [ERROR] Error: Error: 1P event logging: 16 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:21.766Z [ERROR] Error: Error: {"message":"Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:21.766Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 16 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:16:24.362Z [DEBUG] [useDeferredValue] Messages deferred by 1 (36→37)
+2026-03-04T14:16:24.389Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-04T14:16:24.389Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:16:24.389Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:16:24.389Z [DEBUG] autocompact: tokens=42520 threshold=167000 effectiveWindow=180000
+2026-03-04T14:16:24.390Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-04T14:16:24.392Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.62.023; cc_entrypoint=cli; cch=00000;
+2026-03-04T14:16:24.392Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-04T14:16:24.392Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-04T14:16:24.392Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-04T14:16:24.402Z [DEBUG] High write ratio: blit=0, write=3889 (100.0% writes), screen=101x146
+2026-03-04T14:16:24.403Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-03-04T14:16:27.509Z [DEBUG] Stream started - received first chunk
+2026-03-04T14:16:27.532Z [DEBUG] Forked agent [prompt_suggestion] received message: type=assistant
+2026-03-04T14:16:27.576Z [DEBUG] Getting matching hook commands for SubagentStop with query:
+2026-03-04T14:16:27.576Z [DEBUG] Found 0 hook matchers in settings
+2026-03-04T14:16:27.576Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-04T14:16:27.576Z [DEBUG] Forked agent [prompt_suggestion] finished: 1 messages, types=[assistant], totalUsage: input=295 output=6 cacheRead=42009 cacheCreate=233
+2026-03-04T14:16:27.576Z [DEBUG] [Speculation] enabled=false
+2026-03-04T14:16:29.412Z [ERROR] Error: Error: 1P event logging: 13 events failed to export (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)
+    at queueFailedEvents (/$bunfs/root/claude:6252:2350)
+    at async doExport (/$bunfs/root/claude:6252:1257)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:29.413Z [ERROR] Error: Error: {"message":"Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2407:25028)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at l$D (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-04T14:16:29.413Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)","originalLine":"6252","originalColumn":"1409","line":"6252","column":"1409","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 13 events (status=429, code=ERR_BAD_REQUEST, Request failed with status code 429)\n    at doExport (/$bunfs/root/claude:6252:1409)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-04T14:16:44.086Z [DEBUG] High write ratio: blit=1314, write=3716 (73.9% writes), screen=101x146
+2026-03-04T14:18:51.314Z [DEBUG] High write ratio: blit=1314, write=3716 (73.9% writes), screen=101x146
+2026-03-04T14:18:52.225Z [DEBUG] High write ratio: blit=1314, write=3716 (73.9% writes), screen=101x146
+2026-03-04T14:21:04.949Z [DEBUG] High write ratio: blit=1314, write=3716 (73.9% writes), screen=101x146
+2026-03-04T14:21:06.639Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-04T14:21:07.128Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:21:07.129Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:21:07.129Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:21:07.130Z [DEBUG] Successfully updated to version 2.1.68
+2026-03-04T14:21:07.220Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-04T14:21:07.465Z [DEBUG] Checking for native installer update to version 2.1.68
+2026-03-04T14:21:07.466Z [DEBUG] Version 2.1.68 already installed, updating symlink
+2026-03-04T14:21:07.466Z [DEBUG] Created directory /Users/masanao/.local/bin for symlink
+2026-03-04T14:21:07.467Z [DEBUG] Successfully updated to version 2.1.68

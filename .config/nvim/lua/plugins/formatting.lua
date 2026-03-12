@@ -21,13 +21,8 @@ return {
         json = { "biome" },
         jsonc = { "biome" },
         css = { "biome" },
-      },
-      formatters = {
-        ["markdownlint-cli2"] = {
-          condition = function()
-            return true
-          end,
-        },
+        markdown = { "markdownlint-cli2", "prettier" },
+        ["markdown.mdx"] = { "markdownlint-cli2", "prettier" },
       },
     },
   },

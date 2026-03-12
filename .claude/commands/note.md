@@ -1,0 +1,60 @@
+---
+description: 調べ物中に気になったトピックをノートとして作成する。どのプロジェクトからでも呼び出し可能で、保存先は Obsidian nexus vault。
+user-invocable: true
+---
+
+ユーザが調べ物中に気になったトピックについてノートを作成する。
+保存先は常に `/Users/masanao/Obsidian/nexus/` 配下とする。
+
+## 入力
+
+$ARGUMENTS
+
+引数にはノートのトピック（タイトル）を指定する。
+例: `/note Raftアルゴリズム`、`/note Rustのライフタイム`
+
+## 手順
+
+1. まず `/Users/masanao/Obsidian/nexus/CONVENTIONS.md` を読み、フォーマット規約を確認する
+2. Web 検索などで、指定トピックについて信頼できる情報を収集する
+3. vault 内に既存の関連ノートがないか `/Users/masanao/Obsidian/nexus/` 配下を Grep/Glob で確認する
+4. トピックに最も適した保存先ディレクトリを決定する:
+   - 技術トピック → `/Users/masanao/Obsidian/nexus/Tech/<カテゴリ>/` 配下
+   - 記事・読書メモ → `/Users/masanao/Obsidian/nexus/Resources/ReadingNotes/`
+   - それ以外 → ユーザに確認
+5. 以下のフォーマットでノートを作成する
+
+## ノートフォーマット
+
+```markdown
+---
+tags:
+  - <kebab-case のタグ>
+created_at: <今日の日付 YYYY-MM-DD>
+status: draft
+---
+
+# <トピック名>
+
+## 概要
+
+<トピックの簡潔な説明（2-3文）>
+
+## 内容
+
+<調査した内容を構造化して記述>
+
+## 参考
+
+- [参考資料タイトル](URL)
+```
+
+## ルール
+
+- CONVENTIONS.md のフロントマター規約・リンク規約に厳密に従う
+- Wikilink (`[[...]]`) は使用禁止。標準 Markdown リンクを使う
+- 内容は日本語で記述する
+- 1ファイル300行以内に収める
+- タグは kebab-case で、トピックに関連するものを 1-3 個つける
+- 既存の関連ノートがあれば、相互リンクを提案する
+- 作成後、ファイルパスをユーザに報告する
