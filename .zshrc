@@ -25,6 +25,7 @@ alias dc='docker compose'
 alias g='git'
 alias k='kubectl'
 alias lzd='lazydocker'
+alias lzg='lazygit'
 alias cl='claude'
 
 
