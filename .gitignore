@@ -53,3 +53,10 @@
 .vscode/
 .idea/
 *.sublime-workspace
+
+# ========================================
+# Claude Code ランタイム状態
+# settings.json のみ追跡、他は無視
+# ========================================
+.claude/*
+!.claude/settings.json

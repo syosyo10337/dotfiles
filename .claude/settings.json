@@ -1,3 +1,44 @@
 {
-  "voiceEnabled": true
+  "enabledPlugins": {
+    "code-review@claude-code-plugins": true,
+    "ralph-wiggum@claude-code-plugins": true,
+    "superpowers@superpowers-marketplace": true,
+    "superpowers-dev@superpowers-marketplace": true,
+    "superpowers-lab@superpowers-marketplace": true,
+    "superpowers-developing-for-claude-code@superpowers-marketplace": true,
+    "agent-sdk-dev@claude-code-plugins": true,
+    "claude-session-driver@superpowers-marketplace": true,
+    "double-shot-latte@superpowers-marketplace": true,
+    "elements-of-style@superpowers-marketplace": true,
+    "explanatory-output-style@claude-code-plugins": true,
+    "feature-dev@claude-code-plugins": true,
+    "frontend-design@claude-code-plugins": true,
+    "learning-output-style@claude-code-plugins": true,
+    "private-journal-mcp@superpowers-marketplace": true,
+    "security-guidance@claude-code-plugins": true,
+    "superpowers-chrome@superpowers-marketplace": true,
+    "context7-plugin@context7-marketplace": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "context7-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "upstash/context7"
+      }
+    }
+  },
+  "voiceEnabled": true,
+  "effortLevel": "xhigh"
 }

@@ -62,6 +62,57 @@ link_to_homedir() {
   echo "✓ Symlinks created"
 }
 
+link_claude_settings() {
+  read -p "Link Claude Code settings? (y/N): " answer
+  if [[ ! "$answer" =~ ^[Yy]$ ]]; then
+    echo "✓ Skipping Claude Code settings"
+    return 0
+  fi
+
+  echo "Linking Claude Code settings..."
+
+  local src="$DOTDIR/.claude/settings.json"
+  local dest_dir="$HOME/.claude"
+  local dest="$dest_dir/settings.json"
+
+  if [[ ! -f "$src" ]]; then
+    echo "  Skip: $src not found"
+    return 0
+  fi
+
+  if [[ -L "$dest_dir" ]]; then
+    local target
+    target="$(readlink "$dest_dir")"
+    if [[ "$target" == "$DOTDIR/.claude" ]]; then
+      echo "  Migrating legacy symlink: $dest_dir -> $target"
+      rm -f "$dest_dir"
+      mkdir -p "$dest_dir"
+      shopt -s dotglob nullglob
+      for entry in "$DOTDIR"/.claude/*; do
+        local entry_name
+        entry_name=$(basename "$entry")
+        [[ "$entry_name" == "settings.json" ]] && continue
+        mv "$entry" "$dest_dir/"
+      done
+      shopt -u dotglob nullglob
+      echo "  Moved runtime state to $dest_dir"
+    else
+      rm -f "$dest_dir"
+    fi
+  fi
+
+  mkdir -p "$dest_dir"
+
+  if [[ -L "$dest" ]]; then
+    rm -f "$dest"
+  elif [[ -e "$dest" ]]; then
+    rm -rf "$HOME/.dotbackup/.claude__settings.json"
+    mv "$dest" "$HOME/.dotbackup/.claude__settings.json"
+  fi
+  ln -snf "$src" "$dest"
+  echo "  Linked: $dest -> $src"
+}
+
 setup_gitconfig() {
   if [[ -e "$HOME/.gitconfig.local" ]]; then
     echo "✓ ~/.gitconfig.local already exists, skipping..."
@@ -112,6 +163,7 @@ done
 
 check_homebrew
 link_to_homedir
+link_claude_settings
 setup_gitconfig
 install_packages
 printf "\e[1;36m Install completed! \e[m\n"
