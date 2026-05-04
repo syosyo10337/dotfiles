@@ -39,6 +39,7 @@
       }
     }
   },
+  "effortLevel": "xhigh",
   "voiceEnabled": true,
-  "effortLevel": "xhigh"
+  "skipAutoPermissionPrompt": true
 }
