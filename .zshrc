@@ -32,11 +32,18 @@ alias cl='claude'
 # starship
 eval "$(starship init zsh)"
 
-# vim related
+# eza / bat / zoxide
 alias ls="eza --icons"
 alias ll="eza -l --icons"
 alias cat="bat"
 eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# editor (nvim)
+export EDITOR='nvim'
+export VISUAL='nvim'
+alias nv='nvim'
+alias vim='nvim'   # muscle memory用
+alias vi='nvim'    # muscle memory用
 
