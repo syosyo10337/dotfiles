@@ -38,11 +38,6 @@ Brewfile外で別途インストールが必要なもの:
 # bun
 curl -fsSL https://bun.sh/install | bash
 
-# SDKMAN (Java, sbt)
-curl -s "https://get.sdkman.io" | bash
-sdk install java 21.0.9-tem
-sdk install sbt 1.12.1
-
 # Claude Code
 npm install -g @anthropic-ai/claude-code
 
