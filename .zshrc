@@ -1,22 +1,17 @@
 export PATH="/usr/local/opt/mysql/bin:$PATH"
 
 # fnm
-FNM_PATH="/Users/masanao/Library/Application Support/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/masanao/Library/Application Support/fnm:$PATH"
-  eval "`fnm env`"
-fi
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 # bun completions
-[ -s "/Users/masanao/.bun/_bun" ] && source "/Users/masanao/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
-[[ /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh)
+[[ -x /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh)
 
 
 # aliases
