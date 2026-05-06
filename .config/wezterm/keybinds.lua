@@ -32,9 +32,7 @@ M.keys = {
 	{ key = "g", mods = "LEADER", action = act.PaneSelect }, -- ペイン選択UI
 
 	-- ===== タブ操作 =====
-	{ key = "c", mods = "LEADER", action = act.SpawnTab("DefaultDomain") }, -- 新規タブ
-	{ key = "n", mods = "LEADER", action = act.ActivateTabRelative(1) }, -- 次のタブ
-	{ key = "p", mods = "LEADER", action = act.ActivateTabRelative(-1) }, -- 前のタブ
+	-- cmd+T / ctrl+tab / ctrl+shift+tab のデフォルトを利用
 
 	-- ===== その他 =====
 	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode }, -- コピーモード
