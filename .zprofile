@@ -14,7 +14,6 @@ export BUN_INSTALL="$HOME/.bun"
 
 # 静的 PATH (login shell で 1 回だけ追加すれば充分)
 path=(
-  "/usr/local/opt/mysql/bin"
   "$HOME/.local/bin"
   "$BUN_INSTALL/bin"
   $path

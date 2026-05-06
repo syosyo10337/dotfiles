@@ -36,7 +36,8 @@ macOS 用の個人 dotfiles。
 - **`Brewfile` / `Brewfile.personal` の境界**: **業務 / 個人で使い分ける**。会社用 PC で使用が禁止されているツール・GUI cask は `Brewfile.personal` 側に入れる。両環境で使うものは `Brewfile`
 - **新しい CLI ツールの config**: 基本的にここで管理する（別マシンで再現したいため）。設定ファイルがトップレベル dotfile (`~/.foo`) なら直置き、`~/.config/foo/` 配下なら `.config/foo/` ディレクトリで管理（installer は `.config/` ごと symlink する）
 - **機密情報** (api key, token, ssh key 等): 当然除外。git 管理外
-- **machine-specific な設定** (PATH のハードコードパス、特定マシンでしか使わない alias 等): **未決定 / 要検討**
-  - 既存パターン: `~/.gitconfig.local` を `.gitconfig` から `[include] path = ~/.gitconfig.local` で読み込み、git 管理外として個人 / マシン固有設定を分離している
-  - 候補: `.zshrc` 末尾で `[ -f ~/.zshrc.local ] && source ~/.zshrc.local` を読み、`.zshrc.local` を git 管理外にする `.gitconfig.local` 流儀の踏襲
-  - 現状の `.zshrc` は `/Users/masanao/...` 等のハードコードが混在しており、可搬性向上の小規模リファクタも合わせて検討する余地がある
+- **machine-specific な設定** (PATH のハードコードパス、特定マシンでしか使わない alias 等): `~/.zshrc.local` に分離する。`.gitconfig.local` と同じ流儀
+  - `.zshrc` 末尾で `[ -f ~/.zshrc.local ] && source ~/.zshrc.local` で読み込み
+  - `~/.zshrc.local` 自体は git 管理外（`*.local` パターンで `.gitignore` 済み）
+  - 例: Intel homebrew (`/usr/local`) に入れている特定パッケージの PATH、業務マシン側で禁止されているツール用設定 等
+  - `.zprofile` で `typeset -U path PATH` を設定済みなので、`.zshrc.local` 内で `path=(... $path)` しても自動で重複排除される

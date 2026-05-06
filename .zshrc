@@ -35,3 +35,6 @@ alias nv='nvim'
 alias vim='nvim'   # muscle memory用
 alias vi='nvim'    # muscle memory用
 
+# machine-specific overrides (git 管理外。雛形は CLAUDE.md 参照)
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
