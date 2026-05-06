@@ -39,7 +39,7 @@ local gruvbox = {
 
 config.window_frame = {
 	font = wezterm.font("Moralerspace Argon"),
-	font_size = 14.0,
+	font_size = 12.0,
 }
 
 -- タブのタイトルから番号を除去し、プロセス名だけ表示
