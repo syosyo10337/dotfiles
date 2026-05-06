@@ -14,15 +14,17 @@ return {
       ---@param bufnr integer
       ---@return boolean
       condition = function(bufnr)
-        -- 真のバグは rainbow-delimiters/lib.lua:202: Neovim 0.12 で
+        -- 根本バグ: rainbow-delimiters/lib.lua:202 が parser==nil を
+        -- 検査せず parser:register_cbs を呼ぶ。Neovim 0.12 で
         -- vim.treesitter.get_parser() が「失敗時に nil を返す」仕様に
-        -- 変わったが、rainbow-delimiters は pcall の success のみ見て
-        -- parser==nil を検査せずに parser:register_cbs を呼ぶ。
+        -- 変わったが rainbow-delimiters 側が追従していないため。
         --
-        -- 実ファイルバッファ (buftype="") 以外では parser を取れず、
-        -- かつ rainbow を効かせる必要もない (snacks notif/picker/terminal,
-        -- noice popup, blink.cmp menu, flash prompt 等) ため除外する。
-        return vim.bo[bufnr].buftype == ""
+        -- nil parser が発生する条件:
+        --   (a) 非実ファイルバッファ (snacks notif/picker, noice popup 等)
+        --   (b) 実ファイルだが filetype に対応する parser が無い (zsh 等)
+        if vim.bo[bufnr].buftype ~= "" then return false end
+        local ok, parser = pcall(vim.treesitter.get_parser, bufnr)
+        return ok and parser ~= nil
       end,
     })
   end,
