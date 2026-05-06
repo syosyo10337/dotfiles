@@ -4,3 +4,18 @@
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# zsh の path/PATH array は連動する tied parameter。
+# typeset -U で重複排除を有効化 (再 source / nested shell でも安全)。
+typeset -U path PATH
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+
+# 静的 PATH (login shell で 1 回だけ追加すれば充分)
+path=(
+  "/usr/local/opt/mysql/bin"
+  "$HOME/.local/bin"
+  "$BUN_INSTALL/bin"
+  $path
+)
