@@ -21,7 +21,6 @@ The installer will:
 
 - `.zshrc` - Zsh configuration
 - `.zprofile` - PATH settings (Python, OrbStack, Homebrew)
-- `.bashrc` - Bash configuration
 - `.gitconfig` - Shared Git configuration (aliases, colors, etc.)
 - `~/.gitconfig.local` - Personal Git settings (not tracked in this repo)
 - `.config/nvim/` - Neovim configuration (LazyVim)
