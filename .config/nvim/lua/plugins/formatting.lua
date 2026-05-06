@@ -1,5 +1,7 @@
 return {
   -- Biome LSP (linter + formatter diagnostics)
+  -- formatting.biome extras は formatter 登録のみで LSP は登録しないため、
+  -- リアルタイム diagnostics を得る目的でここに残す。
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -9,18 +11,12 @@ return {
     },
   },
 
-  -- Biome as formatter via conform.nvim
+  -- markdown formatter は formatting.biome extras の supported に含まれないため、
+  -- prettier + markdownlint-cli2 をここで明示する。
   {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
-        javascript = { "biome" },
-        typescript = { "biome" },
-        javascriptreact = { "biome" },
-        typescriptreact = { "biome" },
-        json = { "biome" },
-        jsonc = { "biome" },
-        css = { "biome" },
         markdown = { "prettier", "markdownlint-cli2" },
         ["markdown.mdx"] = { "prettier", "markdownlint-cli2" },
       },
